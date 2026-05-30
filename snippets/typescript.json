@@ -1,0 +1,22 @@
+{
+  "Radarboard widget descriptor": {
+    "prefix": "rb-widget-descriptor",
+    "body": [
+      "export const ${1:name}Descriptor: WidgetDescriptor = {",
+      "  id: \"${2:id}\",",
+      "  name: \"${3:Name}\",",
+      "  description: \"${4:Description}\",",
+      "  defaultSlot: \"slot8\",",
+      "  component: ${5:Component},",
+      "};"
+    ],
+    "description": "Create a Radarboard widget descriptor."
+  },
+  "Radarboard MCP tools": {
+    "prefix": "rb-mcp-tools",
+    "body": [
+      "export const ${1:name}McpTools: McpToolDefinition[] = [];"
+    ],
+    "description": "Create an MCP tools export."
+  }
+}

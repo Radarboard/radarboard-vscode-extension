@@ -1,0 +1,7 @@
+.git/**
+.vscode-test/**
+node_modules/**
+src/**
+*.vsix
+pnpm-lock.yaml
+tsconfig.json

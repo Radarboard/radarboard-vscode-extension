@@ -1,0 +1,111 @@
+{
+  "name": "radarboard-extensions",
+  "displayName": "Radarboard Extensions",
+  "description": "Build, validate, and preview Radarboard community extensions.",
+  "version": "0.1.0",
+  "publisher": "radarboard",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Radarboard/radarboard-vscode-extension.git"
+  },
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:radarboardExtensions.status",
+    "onCommand:radarboardExtensions.createExtension"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Radarboard Extensions",
+      "properties": {
+        "radarboardExtensions.cliPath": {
+          "type": "string",
+          "default": "radarboard-extension",
+          "description": "Path to the radarboard-extension CLI."
+        },
+        "radarboardExtensions.radarboardPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to a local Radarboard source checkout."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "radarboardExtensions.createExtension",
+        "title": "Radarboard: Create Extension"
+      },
+      {
+        "command": "radarboardExtensions.connectDevApp",
+        "title": "Radarboard: Connect to Radarboard Dev App"
+      },
+      {
+        "command": "radarboardExtensions.startDevSession",
+        "title": "Radarboard: Start Dev Session"
+      },
+      {
+        "command": "radarboardExtensions.validateCurrent",
+        "title": "Radarboard: Validate Current Extension"
+      },
+      {
+        "command": "radarboardExtensions.submitCheck",
+        "title": "Radarboard: Run Submission Check"
+      },
+      {
+        "command": "radarboardExtensions.openSandbox",
+        "title": "Radarboard: Open Sandbox"
+      },
+      {
+        "command": "radarboardExtensions.openDocs",
+        "title": "Radarboard: Open Developer Docs"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "radarboardExtensions",
+          "title": "Radarboard",
+          "icon": "media/radarboard.svg"
+        }
+      ]
+    },
+    "views": {
+      "radarboardExtensions": [
+        {
+          "id": "radarboardExtensions.status",
+          "name": "Extension Status"
+        }
+      ]
+    },
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      },
+      {
+        "language": "markdown",
+        "path": "./snippets/markdown.json"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "node ./out/test/run-tests.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.0",
+    "@types/vscode": "^1.96.0",
+    "@vscode/test-electron": "^2.4.1",
+    "@vscode/vsce": "^3.2.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Radarboard extension README": {
+    "prefix": "rb-readme",
+    "body": [
+      "# ${1:Extension Name}",
+      "",
+      "## Setup",
+      "",
+      "${2:Setup steps}",
+      "",
+      "## Limitations",
+      "",
+      "${3:Known limitations}"
+    ],
+    "description": "Radarboard extension README skeleton."
+  }
+}
