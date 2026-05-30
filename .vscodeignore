@@ -1,7 +1,11 @@
 .git/**
+.github/**
+.gitignore
 .vscode-test/**
 node_modules/**
 src/**
+out/test/**
+out/**/*.map
 *.vsix
 pnpm-lock.yaml
 tsconfig.json

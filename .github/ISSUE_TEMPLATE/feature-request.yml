@@ -1,0 +1,20 @@
+name: Feature request
+description: Suggest an improvement to the Radarboard VS Code extension.
+title: "Feature: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow
+      description: Which extension development workflow should be easier?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should the extension do?
+    validations:
+      required: true
